@@ -14,8 +14,17 @@ Nakon toga sam godinama tražio s kim bih svirao i gde bih snimao te pesme. Na k
 
 Kontakt: Svirke, možda sviramo ako se navežbamo i ako se sakupimo. Više volimo javne probe :)
 
+Neki od prijatelja sa kojima sam veoma uživao da sviram sada žive u inostranstvu, neki se bave svojim projektima, ali nadam se da ću sa svakim svirati još mnogo puta.
+
+Te pesme nisu nikom naročito bitne osim meni - one pamte čitav jedan izgubljeni svet..
+
+Sa raznim ljudima, pesme dobijaju drugačiji stil i život, menjaju se preko roka, metala, regea, ambijenta, gypsy panka... i tako ista pesma postaje uvek nova i drugačija.
+
+Cilj projekta je da se pesme žive i da ekipa može da ih svira u bilo kojoj postavi, čak i bez njihovog tvorca.
+
 ## TODO
 
+izabrati slike za naslovnu
 dodati tekstove pesama
 dodati dečji album
 https://www.youtube.com/playlist?list=PLKvRbCNSB1-fbktPsvNi-dUqEW864sfRq
