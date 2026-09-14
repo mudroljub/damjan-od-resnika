@@ -2,9 +2,9 @@
 
 Damjan od Resnika, počeo kao kantautor, postao muzički projekat koji okuplja prijatelje iz kraja i šire.
 
-Napisati kratku istoriju projekta: pisanje pesama, Uživo iz svoje sobe, U potrazi za bendom, javne probe...
+Napisati kratku istoriju projekta: pisanje pesama, Uživo iz svoje sobe, U potrazi za bendom, javne probe... pauza u radu zbog rada za život
 
-Bivši, sadašnji i budući muzičari...
+Bivši, sadašnji i budući muzičari... crtač...
 
 ## TODO
 
