@@ -28,7 +28,10 @@ izabrati slike za naslovnu
 dodati tekstove pesama
 dodati dečji album
 https://www.youtube.com/playlist?list=PLKvRbCNSB1-fbktPsvNi-dUqEW864sfRq
-dodati singlove (Pola kile gandže, Moja majka...)
+
+dodati singlove 
+    Pola kile gandže https://youtu.be/Qlxs0WuU-cc?si=JdneB3hDh6Dm-ABU
+    Moja majka https://youtu.be/ryJw0oVt6Tw?si=-QAGNcrBrYyyeThd
 
 ## OPISI SLIKA
 

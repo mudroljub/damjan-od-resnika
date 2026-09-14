@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "mastering-engineer": {
+      "source": "bitwize-music-studio/claude-ai-music-skills",
+      "sourceType": "github",
+      "skillPath": "skills/mastering-engineer/SKILL.md",
+      "computedHash": "829287e8e56ccf6ffea9080abfc5b4eb4ec028bedde23559dbfcf7dba2953286"
+    },
+    "mix-engineer": {
+      "source": "bitwize-music-studio/claude-ai-music-skills",
+      "sourceType": "github",
+      "skillPath": "skills/mix-engineer/SKILL.md",
+      "computedHash": "07b3736408f3a7bb594c832a2d7489182e784fb319938f85c3450b6bd885f62d"
+    }
+  }
+}
