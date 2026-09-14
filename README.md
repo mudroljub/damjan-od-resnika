@@ -4,7 +4,7 @@ Damjan od Resnika, počeo kao kantautor, sada muzički projekat koji okuplja pri
 
 ## TODO
 
-Napraviti sajt za muzički projekat Damjan od Resnika.
+Napraviti dvojezični sajt (sr i en) za muzički projekat Damjan od Resnika.
 
 Glavna navigacija: Početna / Diskografija / Fotogalerija / Kontakt
 
@@ -15,10 +15,10 @@ art/damjan-od-resnika-najgori-glas.jpg
 plejer koji pušta pesme shuffle bez ponavljanja.
 
 Diskografija: 
-albumi poređani hronološki (najstariji na dnu). Svaku pesmu je moguće pustiti, a svaki album je moguće preuzeti. Za download albuma koristiti ZIP-ove postavljene na GitHub Releases.
+albumi poređani hronološki (noviji na vrhu). Svaku pesmu je moguće pustiti, a svaki album je moguće preuzeti. Za download albuma koristiti ZIP-ove postavljene na GitHub Releases.
 
 Fotogalerija:
-grid fotogalerija
+grid fotogalerija, slike poređane hronološki (novije na vrhu)
 
 Kontakt:
 Za bilo kakva pitanja oko ovog muzičkog projekta slobodno kontaktirajte Damjana na mudroljub@gmail.com
@@ -30,6 +30,8 @@ Wikipedia: https://en.wikipedia.org/wiki/Damjan_od_Resnika
 Facebook: https://www.facebook.com/damjanodresnika/
 Youtube: https://www.youtube.com/@DamjanOdResnika
 Bandcamp: https://damjanodresnika.bandcamp.com/
+
+Kasnije dodati i stranicu tekstovi pesama? Ili pod diskografija?
 
 ## OPISI SLIKA
 
