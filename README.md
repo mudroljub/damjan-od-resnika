@@ -30,4 +30,5 @@ U skladu sa životnom situacijom, jedno vreme sam se žanrovski okrenuo dečjim 
 
 ## TODO
 
-- napraviti zip download za dečji album
+- napisati o projektu
+- srediti kontakt
