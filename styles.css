@@ -1,6 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
 
-:root { --night:#050505; --ink:#121212; --paper:#ecebe7; --gold:#d6a63b; --aqua:#83b9bc; --red:#ba5647; --line:rgba(236,235,231,.19); }
+:root { --night:#050505; --ink:#121212; --paper:#ecebe7; --gold:#ad8bd8; --aqua:#7fbf82; --red:#c95b5b; --line:rgba(236,235,231,.19); }
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--night); color:var(--paper); font-family:'DM Sans',sans-serif; font-size:16px; line-height:1.55; }
