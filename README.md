@@ -10,6 +10,8 @@ Bivši, sadašnji i budući muzičari... crtač...
 
 dodati tekstove pesama
 dodati dečji album
+https://www.youtube.com/playlist?list=PLKvRbCNSB1-fbktPsvNi-dUqEW864sfRq
+dodati singlove (Pola kile gandže, Moja majka...)
 
 ## OPISI SLIKA
 

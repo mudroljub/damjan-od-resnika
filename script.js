@@ -1,4 +1,17 @@
 const audio = document.querySelector('#audio');
+const lyrics = {
+  '1994': { file: 'lyrics/1994.txt' }, 'Bez poverenja': { file: 'lyrics/bez-poverenja.txt' },
+  'Besplatna pesma': { file: 'lyrics/besplatna-pesma.txt' }, 'Ekumena': { file: 'lyrics/ekumena.txt', credit: 'Tekst: Višnja · Muzika: Damjan' },
+  'Fini mladi ljudi': { file: 'lyrics/fini-mladi-ljudi.txt' }, 'Ja sam bogat': { file: 'lyrics/ja-sam-bogat.txt' },
+  'Jebeni grad': { file: 'lyrics/jebeni-grad.txt' }, 'Lepota': { file: 'lyrics/lepota.txt' },
+  'Mali': { file: 'lyrics/mali.txt' },
+  'Mlade mame': { file: 'lyrics/mlade-mame.txt' }, 'Mladi filozof je postao kamen': { file: 'lyrics/mladi-filozof-je-postao-kamen.txt' },
+  'Moja država': { file: 'lyrics/moja-drzava.txt' }, 'Moje vreme prošlo': { file: 'lyrics/moje-vreme-proslo.txt' },
+  'Negde': { file: 'lyrics/negde.txt' }, 'Noć pod nebom': { file: 'lyrics/noc-pod-nebom.txt', credit: 'Tekst: Tijana Soleša · Muzika: Damjan od Resnika' }, 'Obnova i izgradnja': { file: 'lyrics/obnova-i-izgradnja.txt' },
+  'Sloboda': { file: 'lyrics/sloboda.txt' }, 'Sunce sija u našem kraju': { file: 'lyrics/sunce-sija-u-nasem-kraju.txt' },
+  'Udvoje': { file: 'lyrics/udvoje.txt' }, 'Vasiona': { file: 'lyrics/vasiona.txt' }, 'Zastor': { file: 'lyrics/zastor.txt' },
+  'Znam taj dan': { file: 'lyrics/znam-taj-dan.txt' }
+};
 const nowPlaying = document.querySelector('#now-playing');
 const playButton = document.querySelector('#main-play');
 const visibleTracks = [...document.querySelectorAll('.track')];
@@ -13,13 +26,57 @@ const tracks = (visibleTracks.length ? visibleTracks : catalogTracks).map(item =
 let current = null;
 let played = [];
 
+const lyricsDialog = document.createElement('dialog');
+lyricsDialog.className = 'lyrics-dialog';
+lyricsDialog.innerHTML = '<article class="lyrics-sheet"><header class="lyrics-header"><h2 id="lyrics-title"></h2><form method="dialog"><button class="lyrics-close" type="submit">Zatvori</button></form></header><div class="lyrics-body"><pre id="lyrics-content" class="lyrics-content"></pre><p id="lyrics-credit" class="lyrics-credit" hidden></p></div></article>';
+document.body.append(lyricsDialog);
+const lyricsTitle = lyricsDialog.querySelector('#lyrics-title');
+const lyricsContent = lyricsDialog.querySelector('#lyrics-content');
+const lyricsCredit = lyricsDialog.querySelector('#lyrics-credit');
+
+async function openLyrics(title, resource) {
+  lyricsTitle.textContent = title;
+  lyricsCredit.hidden = !resource.credit;
+  lyricsCredit.textContent = resource.credit ?? '';
+  lyricsContent.textContent = 'Učitavanje teksta…';
+  lyricsDialog.showModal();
+  try {
+    const response = await fetch(resource.file);
+    if (!response.ok) throw new Error();
+    lyricsContent.textContent = await response.text();
+  } catch {
+    lyricsContent.textContent = 'Tekst trenutno nije dostupan.';
+  }
+}
+
+lyricsDialog.addEventListener('click', event => {
+  if (event.target === lyricsDialog) lyricsDialog.close();
+});
+
+visibleTracks.forEach(item => {
+  const title = item.querySelector('.play-track').textContent.trim();
+  const resource = lyrics[title];
+  if (!resource) return;
+  const button = document.createElement('button');
+  button.className = 'lyric-trigger';
+  button.type = 'button';
+  button.textContent = 'Tekst';
+  button.addEventListener('click', () => openLyrics(title, resource));
+  item.append(button);
+});
+
 function play(track) {
   current = track;
   audio.src = track.path;
   audio.play();
   nowPlaying.textContent = `${track.title} — ${track.album} (${track.year})`;
   document.querySelectorAll('.track').forEach(item => item.classList.toggle('active', item.dataset.path === track.path));
-  playButton.textContent = '❚❚';
+}
+
+function updatePlaybackControls() {
+  const isPlaying = Boolean(current && !audio.paused);
+  document.querySelectorAll('.track').forEach(item => item.classList.toggle('playing', isPlaying && item.dataset.path === current.path));
+  playButton.textContent = isPlaying ? '❚❚' : '▶';
 }
 
 function nextTrack() {
@@ -33,19 +90,25 @@ function nextTrack() {
 
 if (audio) {
   document.querySelectorAll('.play-track').forEach(button => button.addEventListener('click', () => {
-    play(tracks.find(track => track.path === button.closest('.track').dataset.path));
+    const track = tracks.find(item => item.path === button.closest('.track').dataset.path);
+    if (current?.path === track.path) {
+      if (audio.paused) audio.play();
+      else audio.pause();
+      return;
+    }
+    play(track);
   }));
   document.querySelector('#shuffle').addEventListener('click', nextTrack);
   document.querySelector('#next').addEventListener('click', nextTrack);
   audio.addEventListener('ended', nextTrack);
+  audio.addEventListener('play', updatePlaybackControls);
+  audio.addEventListener('pause', updatePlaybackControls);
   playButton.addEventListener('click', () => {
     if (!current) return nextTrack();
     if (audio.paused) {
       audio.play();
-      playButton.textContent = '❚❚';
     } else {
       audio.pause();
-      playButton.textContent = '▶';
     }
   });
 }
