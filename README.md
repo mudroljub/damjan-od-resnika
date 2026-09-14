@@ -30,20 +30,9 @@ U skladu sa životnom situacijom, jedno vreme sam se žanrovski okrenuo dečjim 
 
 ## TODO
 
-slike za naslovnu:
-images/musicians/rlz-bend-2026.jpg
-images/musicians/damjan-od-resnika-prnjavorstock-2011-3.jpg
-images/musicians/damjan-od-resnika-prnjavorstock-2011-1.jpg
-images/musicians/svirka-bigz-2013-krle-dule-zorica.jpg
-images/musicians/svirka-bigz-2013-3.jpg
-images/musicians/svirka-zica-2010-3.jpg
-
-images/musicians/svirka-bigz-pavi-2013.jpg
-images/musicians/svirka-zica-2011.jpg
-
 - diskografiju organizovati u albume i singlove. nakon albuma, dodati i music\singlovi
 - mora li lyrics u js?
-- slike hronološki - na dnu slike benda tušta i tma, a tek potom svirke iz iste godine
+- fotogalerija hronološki - skroz na dnu slike benda tušta i tma, a tek potom svirke iz iste godine
 - ažurirati opise slika
 
 ## OPISI SLIKA
