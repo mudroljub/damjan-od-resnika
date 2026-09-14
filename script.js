@@ -19,8 +19,8 @@ const catalogTracks = [...(document.querySelector('#player-tracks')?.content.que
 const tracks = (visibleTracks.length ? visibleTracks : catalogTracks).map(item => ({
   path: item.dataset.path,
   title: item.dataset.title ?? item.querySelector('.play-track').textContent,
-  album: item.dataset.album ?? item.closest('.album').querySelector('.album-title').textContent,
-  year: item.dataset.year ?? item.closest('.album').querySelector('.album-year').textContent
+  album: item.dataset.album ?? item.closest('.album')?.querySelector('.album-title')?.textContent ?? '',
+  year: item.dataset.year ?? item.closest('.album')?.querySelector('.album-year')?.textContent ?? ''
 }));
 
 let current = null;
@@ -69,7 +69,7 @@ function play(track) {
   current = track;
   audio.src = track.path;
   audio.play();
-  nowPlaying.textContent = `${track.title} — ${track.album} (${track.year})`;
+  nowPlaying.textContent = `${track.title} — ${track.album}${track.year ? ` (${track.year})` : ''}`;
   document.querySelectorAll('.track').forEach(item => item.classList.toggle('active', item.dataset.path === track.path));
 }
 

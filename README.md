@@ -29,5 +29,3 @@ Ljubitelji muzike, prijatelji znani i neznani, dobro došli.
 U skladu sa životnom situacijom, jedno vreme sam se žanrovski okrenuo dečjim pesmama kako bih mogao u studio da snimam za svoju decu i zajedno sa svojom decom. U tom periodu objavio sam Dečji album, pod umetničkim imenom Doktor Mačak.
 
 ## TODO
-
-- diskografiju organizovati u albume i singlove. nakon albuma, dodati i music\singlovi
