@@ -8,9 +8,8 @@ Bivši, sadašnji i budući muzičari... crtač...
 
 ## TODO
 
-Za download albuma koristiti ZIP-ove postavljene na GitHub Releases.
-
-Kasnije dodati i tekstove pesama
+dodati tekstove pesama
+dodati dečji album
 
 ## OPISI SLIKA
 
