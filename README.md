@@ -22,17 +22,29 @@ Sa raznim ljudima, pesme dobijaju drugačiji stil i život, menjaju se preko rok
 
 Cilj projekta je da se pesme žive i da ekipa može da ih svira u bilo kojoj postavi, čak i bez njihovog tvorca.
 
+Eksperimentalna muzika, pesme koje još uvek žive i razvijaju se i ni ja ne znam šta će od njih ispasti.
+
+Ljubitelji muzike, prijatelji znani i neznani, dobro došli.
+
+U skladu sa životnom situacijom, jedno vreme sam se žanrovski okrenuo dečjim pesmama kako bih mogao u studio da snimam za svoju decu i zajedno sa svojom decom. U tom periodu objavio sam Dečji album, pod umetničkim imenom Doktor Mačak.
+
 ## TODO
 
-izabrati slike za naslovnu
-dodati preostale tekstove pesama
-dodati dečji album
-https://www.youtube.com/playlist?list=PLKvRbCNSB1-fbktPsvNi-dUqEW864sfRq
+slike za naslovnu:
+http://127.0.0.1:8080/images/musicians/rlz-bend-2026.jpg
+http://127.0.0.1:8080/images/musicians/damjan-od-resnika-prnjavorstock-2011-3.jpg
+http://127.0.0.1:8080/images/musicians/damjan-od-resnika-prnjavorstock-2011-1.jpg
+http://127.0.0.1:8080/images/musicians/svirka-bigz-2013-krle-dule-zorica.jpg
+http://127.0.0.1:8080/images/musicians/svirka-bigz-2013-3.jpg
+http://127.0.0.1:8080/images/musicians/svirka-zica-2011.jpg
 
-pored Albuma, u disc dodati i singlove:
-    Pola kile gandže [https://youtu.be/Qlxs0WuU-cc?si=JdneB3hDh6Dm-ABU](https://youtu.be/Qlxs0WuU-cc?si=JdneB3hDh6Dm-ABU)
-    Moja majka [https://youtu.be/ryJw0oVt6Tw?si=-QAGNcrBrYyyeThd](https://youtu.be/ryJw0oVt6Tw?si=-QAGNcrBrYyyeThd)
+http://127.0.0.1:8080/images/musicians/svirka-bigz-pavi-2013.jpg
 
+- dodati dečji album: music\2016-decji-album
+- diskografiju organizovati u albume i singlove. nakon albuma, dodati i music\singlovi
+- mora li lyrics u js?
+- slike hronološki - na dnu slike benda tušta i tma, a tek potom svirke iz iste godine
+- ažurirati opise slika
 
 ## OPISI SLIKA
 
