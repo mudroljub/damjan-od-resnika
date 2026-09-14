@@ -4,6 +4,8 @@ Damjan od Resnika, počeo kao kantautor, postao muzički projekat koji okuplja p
 
 Napisati kratku istoriju projekta: pisanje pesama, Uživo iz svoje sobe, U potrazi za bendom, javne probe...
 
+Bivši, sadašnji i budući muzičari...
+
 ## TODO
 
 Za download albuma koristiti ZIP-ove postavljene na GitHub Releases.
