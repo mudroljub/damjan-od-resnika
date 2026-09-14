@@ -14,6 +14,7 @@ const lyrics = {
 };
 const nowPlaying = document.querySelector('#now-playing');
 const playButton = document.querySelector('#main-play');
+const progress = document.querySelector('#player-progress');
 const visibleTracks = [...document.querySelectorAll('.track')];
 const catalogTracks = [...(document.querySelector('#player-tracks')?.content.querySelectorAll('[data-path]') ?? [])];
 const tracks = (visibleTracks.length ? visibleTracks : catalogTracks).map(item => ({
@@ -67,6 +68,11 @@ visibleTracks.forEach(item => {
 
 function play(track) {
   current = track;
+  if (progress) {
+    progress.value = '0';
+    progress.style.setProperty('--progress', '0%');
+    progress.disabled = true;
+  }
   audio.src = track.path;
   audio.play();
   nowPlaying.textContent = `${track.title} — ${track.album}${track.year ? ` (${track.year})` : ''}`;
@@ -98,11 +104,27 @@ if (audio) {
     }
     play(track);
   }));
-  document.querySelector('#shuffle').addEventListener('click', nextTrack);
   document.querySelector('#next').addEventListener('click', nextTrack);
   audio.addEventListener('ended', nextTrack);
   audio.addEventListener('play', updatePlaybackControls);
   audio.addEventListener('pause', updatePlaybackControls);
+  audio.addEventListener('loadedmetadata', () => {
+    if (!progress) return;
+    progress.disabled = !Number.isFinite(audio.duration) || audio.duration <= 0;
+    progress.value = '0';
+    progress.style.setProperty('--progress', '0%');
+  });
+  audio.addEventListener('timeupdate', () => {
+    if (!progress || !Number.isFinite(audio.duration) || audio.duration <= 0) return;
+    const value = (audio.currentTime / audio.duration) * 100;
+    progress.value = String(value);
+    progress.style.setProperty('--progress', `${value}%`);
+  });
+  progress?.addEventListener('input', () => {
+    if (!Number.isFinite(audio.duration) || audio.duration <= 0) return;
+    progress.style.setProperty('--progress', `${progress.value}%`);
+    audio.currentTime = audio.duration * (Number(progress.value) / 100);
+  });
   playButton.addEventListener('click', () => {
     if (!current) return nextTrack();
     if (audio.paused) {
