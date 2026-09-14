@@ -2,7 +2,8 @@ const audio = document.querySelector('#audio');
 const lyrics = {
   '1994': { file: 'lyrics/1994.txt' }, 'Bez poverenja': { file: 'lyrics/bez-poverenja.txt' },
   'Besplatna pesma': { file: 'lyrics/besplatna-pesma.txt' }, 'Ekumena': { file: 'lyrics/ekumena.txt', credit: 'Tekst: Višnja · Muzika: Damjan' },
-  'Fini mladi ljudi': { file: 'lyrics/fini-mladi-ljudi.txt' }, 'Ja sam bogat': { file: 'lyrics/ja-sam-bogat.txt' },
+  'Fini mladi ljudi': { file: 'lyrics/fini-mladi-ljudi.txt' }, 'Fini mladi ljudi (live)': { file: 'lyrics/fini-mladi-ljudi.txt' },
+  'Ja sam bogat': { file: 'lyrics/ja-sam-bogat.txt' }, 'Ja sam bogat (sa probe)': { file: 'lyrics/ja-sam-bogat.txt' },
   'Jebeni grad': { file: 'lyrics/jebeni-grad.txt' }, 'Lepota': { file: 'lyrics/lepota.txt' },
   'Mali': { file: 'lyrics/mali.txt' }, 'Mali prda smrda': { file: 'lyrics/mali-prda-smrda.txt', credit: 'Tekst i muzika: Damjan Pavlica (tata) · Glas i crteži: Iskra Pavlica (6 godina)' },
   'Mlade mame': { file: 'lyrics/mlade-mame.txt' }, 'Mladi filozof je postao kamen': { file: 'lyrics/mladi-filozof-je-postao-kamen.txt' },
