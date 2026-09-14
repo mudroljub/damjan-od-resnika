@@ -31,16 +31,16 @@ U skladu sa životnom situacijom, jedno vreme sam se žanrovski okrenuo dečjim 
 ## TODO
 
 slike za naslovnu:
-http://127.0.0.1:8080/images/musicians/rlz-bend-2026.jpg
-http://127.0.0.1:8080/images/musicians/damjan-od-resnika-prnjavorstock-2011-3.jpg
-http://127.0.0.1:8080/images/musicians/damjan-od-resnika-prnjavorstock-2011-1.jpg
-http://127.0.0.1:8080/images/musicians/svirka-bigz-2013-krle-dule-zorica.jpg
-http://127.0.0.1:8080/images/musicians/svirka-bigz-2013-3.jpg
-http://127.0.0.1:8080/images/musicians/svirka-zica-2011.jpg
+images/musicians/rlz-bend-2026.jpg
+images/musicians/damjan-od-resnika-prnjavorstock-2011-3.jpg
+images/musicians/damjan-od-resnika-prnjavorstock-2011-1.jpg
+images/musicians/svirka-bigz-2013-krle-dule-zorica.jpg
+images/musicians/svirka-bigz-2013-3.jpg
+images/musicians/svirka-zica-2010-3.jpg
 
-http://127.0.0.1:8080/images/musicians/svirka-bigz-pavi-2013.jpg
+images/musicians/svirka-bigz-pavi-2013.jpg
+images/musicians/svirka-zica-2011.jpg
 
-- dodati dečji album: music\2016-decji-album
 - diskografiju organizovati u albume i singlove. nakon albuma, dodati i music\singlovi
 - mora li lyrics u js?
 - slike hronološki - na dnu slike benda tušta i tma, a tek potom svirke iz iste godine
