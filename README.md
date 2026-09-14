@@ -25,6 +25,12 @@ Za bilo kakva pitanja oko ovog muzičkog projekta slobodno kontaktirajte Damjana
 
 Možda staviti sliku images\musicians\publika-bigz.jpg u zaglavlje (iseći visinu pomoću css-a)?
 
+U header ili footer dodati linkove:
+Wikipedia: https://en.wikipedia.org/wiki/Damjan_od_Resnika
+Facebook: https://www.facebook.com/damjanodresnika/
+Youtube: https://www.youtube.com/@DamjanOdResnika
+Bandcamp: https://damjanodresnika.bandcamp.com/
+
 ## OPISI SLIKA
 
 Kasnije dodati opise slika u fotogaleriju.
