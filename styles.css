@@ -182,7 +182,7 @@ h1 { margin-bottom: 1.5rem; }
 .hero-album-covers { gap: 0.75rem; margin-top: 1.5rem; }
 .hero-album-covers a {
   display: block;
-  width: clamp(7rem, 18vw, 16.25rem);
+  width: clamp(7rem, 20vw, 18rem);
   border: 1px solid rgba(236, 235, 231, 0.35);
   transition: border-color var(--duration-fast) ease, transform var(--duration-fast) ease;
 }
@@ -291,7 +291,7 @@ h1 { margin-bottom: 1.5rem; }
 }
 .about-copy { margin: 2rem 0 0; }
 .about-note { max-width: var(--text-width); margin: 2rem 0 0; }
-.about-art { width: min(100%, 445px, 49.5vw); justify-self: center; }
+.about-art { width: min(100%, 380px, 49.5vw); justify-self: center; }
 .about-art picture, .home-photo picture { display: block; }
 .about-image { background: var(--color-canvas); }
 .art-credit { margin: 1rem 0 0; font-size: 0.9rem; line-height: 1.5; text-align: center; }
@@ -343,7 +343,7 @@ h1 { margin-bottom: 1.5rem; }
 }
 .album, .singles-content {
   display: grid;
-  grid-template-columns: minmax(140px, 260px) 1fr;
+  grid-template-columns: minmax(160px, 300px) 1fr;
   gap: clamp(1.5rem, 5vw, 5rem);
 }
 .album { padding: 2rem 0; border-top: 1px solid var(--color-line); }

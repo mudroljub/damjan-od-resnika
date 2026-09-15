@@ -28,15 +28,34 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MusicGroup",
-        "name": "Damjan od Resnika",
-        "url": "https://mudroljub.github.io/damjan-od-resnika/",
-        "image": "https://mudroljub.github.io/damjan-od-resnika/images/musicians/svirka-zica-2010-2.jpg",
-        "sameAs": [
-          "https://www.youtube.com/@DamjanOdResnika",
-          "https://www.facebook.com/damjanodresnika/",
-          "https://en.wikipedia.org/wiki/Damjan_od_Resnika",
-          "https://www.discogs.com/artist/4962725-Damjan-Od-Resnika"
+        "@graph": [
+          {
+            "@type": "MusicGroup",
+            "@id": "https://mudroljub.github.io/damjan-od-resnika/#music-group",
+            "name": "Damjan od Resnika",
+            "url": "https://mudroljub.github.io/damjan-od-resnika/",
+            "image": "https://mudroljub.github.io/damjan-od-resnika/images/musicians/svirka-zica-2010-2.jpg",
+            "founder": {
+              "@id": "https://mudroljub.github.io/damjan-od-resnika/#damjan-pavlica"
+            },
+            "member": {
+              "@id": "https://mudroljub.github.io/damjan-od-resnika/#damjan-pavlica"
+            },
+            "sameAs": [
+              "https://www.youtube.com/@DamjanOdResnika",
+              "https://www.facebook.com/damjanodresnika/",
+              "https://en.wikipedia.org/wiki/Damjan_od_Resnika",
+              "https://www.discogs.com/artist/4962725-Damjan-Od-Resnika"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://mudroljub.github.io/damjan-od-resnika/#damjan-pavlica",
+            "name": "Damjan Pavlica",
+            "alternateName": "Damjan od Resnika",
+            "description": "Muzičar i osnivač muzičkog projekta Damjan od Resnika.",
+            "url": "https://mudroljub.github.io/damjan-od-resnika/o-projektu.html"
+          }
         ]
       }
     </script>
@@ -243,7 +262,7 @@
                 src="images/musicians/svirka-zica-2010-3.jpg"
                 width="3888"
                 height="2592"
-                alt="Akustična svirka Damjana od Resnika u beogradskom klubu Žica 2010."
+                alt="Damjan Pavlica na akustičnoj svirci projekta Damjan od Resnika u beogradskom klubu Žica, 2010."
                 loading="lazy"
                 decoding="async"
             /></picture>
