@@ -65,10 +65,10 @@ h1, h2, h3 {
 }
 .type-label, .hero-kicker, .lyric-trigger, .lyrics-credit { color: var(--color-link); }
 .type-meta, .text-muted, .album-status,
-.album-alias, .art-credit, .home-photo figcaption, .about-page-photo figcaption, .track-number {
+.art-credit, .home-photo figcaption, .about-page-photo figcaption, .track-number, .album-year {
   color: var(--color-text-muted);
 }
-.catalog-heading, .album-year { color: var(--color-emphasis); }
+.catalog-heading { color: var(--color-emphasis); }
 .text-emphasis { color: var(--color-emphasis); }
 .text-link { color: var(--color-link); }
 
@@ -359,7 +359,6 @@ h1 { margin-bottom: 1.5rem; }
 }
 .album-year { margin: 0 0 1.25rem; }
 .album-meta a { color: var(--color-link); text-underline-offset: 0.18em; }
-.album-alias { margin: -0.125rem 0 0.5rem; font-size: 0.9rem; line-height: 1.35; }
 .download {
   display: inline-flex;
   align-items: center;
