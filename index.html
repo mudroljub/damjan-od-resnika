@@ -43,9 +43,18 @@
     <link rel="icon" href="favicon.ico" sizes="any" />
     <link
       rel="preload"
+      href="images/optimized/publika-bigz-2013-sm.avif"
+      as="image"
+      type="image/avif"
+      media="(max-width: 700px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
       href="images/optimized/publika-bigz-2013.avif"
       as="image"
       type="image/avif"
+      media="(min-width: 701px)"
       fetchpriority="high"
     />
     <link
@@ -76,6 +85,9 @@
       <section class="hero">
         <picture
           ><source
+            media="(max-width: 700px)"
+            srcset="images/optimized/publika-bigz-2013-sm.avif"
+            type="image/avif" /><source
             srcset="images/optimized/publika-bigz-2013.avif"
             type="image/avif" />
           <img
