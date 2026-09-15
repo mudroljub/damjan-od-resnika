@@ -32,22 +32,14 @@
       type="image/avif"
       fetchpriority="high"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
-      onload="
-        this.onload = null;
-        this.rel = 'stylesheet';
-      "
+      href="fonts/fraunces-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      fetchpriority="high"
     />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
-    /></noscript>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -77,7 +69,7 @@
             height="635"
             alt="Publika na svirci u BIGZ-u"
             fetchpriority="high"
-            decoding="async"
+            decoding="sync"
         /></picture>
         <div class="hero-content">
           <h1>Damjan<br />od Resnika</h1>
@@ -87,7 +79,7 @@
           </p>
           <div class="hero-album-covers" aria-label="Izdvojeni albumi">
             <a href="diskografija.html#albums">
-              <picture><source srcset="images/optimized/pored-vatre.avif" type="image/avif" /><img
+              <picture><source media="(max-width: 700px)" srcset="images/optimized/pored-vatre-sm.avif" type="image/avif" /><source srcset="images/optimized/pored-vatre.avif" type="image/avif" /><img
                 src="images/albums/pored-vatre.jpg"
                 width="1200"
                 height="1200"
@@ -97,7 +89,7 @@
               /></picture>
             </a>
             <a href="diskografija.html#albums">
-              <picture><source srcset="images/optimized/protiv-tebe.avif" type="image/avif" /><img
+              <picture><source media="(max-width: 700px)" srcset="images/optimized/protiv-tebe-sm.avif" type="image/avif" /><source srcset="images/optimized/protiv-tebe.avif" type="image/avif" /><img
                 src="images/albums/protiv-tebe.jpg"
                 width="1200"
                 height="1200"
@@ -107,7 +99,7 @@
               /></picture>
             </a>
             <a href="diskografija.html#albums">
-              <picture><source srcset="images/optimized/treci-album.avif" type="image/avif" /><img
+              <picture><source media="(max-width: 700px)" srcset="images/optimized/treci-album-sm.avif" type="image/avif" /><source srcset="images/optimized/treci-album.avif" type="image/avif" /><img
                 src="images/albums/treci-album.jpg"
                 width="1196"
                 height="1200"
@@ -229,18 +221,14 @@
             /></picture>
           </figure>
           <figure class="home-photo">
-            <picture
-              ><source
-                srcset="images/optimized/tusta-i-tma-band-smeh-2009.avif"
-                type="image/avif" />
-              <img
-                src="images/musicians/tusta-i-tma-band-smeh-2009.jpg"
-                width="604"
-                height="340"
-                alt="Tušta i tma, 2009."
-                loading="lazy"
-                decoding="async"
-            /></picture>
+            <img
+              src="images/musicians/tusta-i-tma-band-smeh-2009.jpg"
+              width="604"
+              height="340"
+              alt="Tušta i tma, 2009."
+              loading="lazy"
+              decoding="async"
+            />
           </figure>
         </div>
         <a class="gallery-link" href="fotogalerija.html"
