@@ -1,53 +1,11 @@
 const audio = document.querySelector("#audio");
-const lyrics = {
-  1994: { file: "lyrics/1994.txt" },
-  "Bez poverenja": { file: "lyrics/bez-poverenja.txt" },
-  "Besplatna pesma": { file: "lyrics/besplatna-pesma.txt" },
-  Ekumena: {
-    file: "lyrics/ekumena.txt",
-    credit: "Tekst: Višnja · Muzika: Damjan",
-  },
-  "Fini mladi ljudi": { file: "lyrics/fini-mladi-ljudi.txt" },
-  "Fini mladi ljudi (live)": { file: "lyrics/fini-mladi-ljudi.txt" },
-  "Ja sam bogat": { file: "lyrics/ja-sam-bogat.txt" },
-  "Ja sam bogat (sa probe)": { file: "lyrics/ja-sam-bogat.txt" },
-  "Jebeni grad": { file: "lyrics/jebeni-grad.txt" },
-  Lepota: { file: "lyrics/lepota.txt" },
-  Mali: { file: "lyrics/mali.txt" },
-  "Mali prda smrda": {
-    file: "lyrics/mali-prda-smrda.txt",
-    credit:
-      "Tekst i muzika: Damjan Pavlica (tata) · Glas i crteži: Iskra Pavlica (6 godina)",
-  },
-  "Mlade mame": { file: "lyrics/mlade-mame.txt" },
-  "Mladi filozof je postao kamen": {
-    file: "lyrics/mladi-filozof-je-postao-kamen.txt",
-  },
-  "Moja država": { file: "lyrics/moja-drzava.txt" },
-  "Moje vreme prošlo": { file: "lyrics/moje-vreme-proslo.txt" },
-  Negde: { file: "lyrics/negde.txt" },
-  "Noć pod nebom": {
-    file: "lyrics/noc-pod-nebom.txt",
-    credit: "Tekst: Tijana Soleša · Muzika: Damjan od Resnika",
-  },
-  "Obnova i izgradnja": { file: "lyrics/obnova-i-izgradnja.txt" },
-  "Stara mudra sova": {
-    file: "lyrics/stara-mudra-sova.txt",
-    credit:
-      "Tekst i muzika: Damjan Pavlica · Crtež i animacija: Uroš Pejčić i Ilija Višnjić",
-  },
-  Sloboda: { file: "lyrics/sloboda.txt" },
-  "Sunce sija u našem kraju": { file: "lyrics/sunce-sija-u-nasem-kraju.txt" },
-  "Ide miš, mali miš": {
-    file: "lyrics/ide-mis-mali-mis.txt",
-    credit:
-      "Tekst, muzika i spot: Damjan Pavlica · Animacija miša: Vladimir Joksimović",
-  },
-  Udvoje: { file: "lyrics/udvoje.txt" },
-  Vasiona: { file: "lyrics/vasiona.txt" },
-  Zastor: { file: "lyrics/zastor.txt" },
-  "Znam taj dan": { file: "lyrics/znam-taj-dan.txt" },
+const lyricCredits = {
+  Ekumena: "Tekst: Višnja · Muzika: Damjan",
+  "Mali prda smrda":
+    "Tekst i muzika: Damjan Pavlica (tata) · Glas i crteži: Iskra Pavlica (6 godina)",
+  "Noć pod nebom": "Tekst: Tijana Soleša · Muzika: Damjan od Resnika",
 };
+
 const nowPlaying = document.querySelector("#now-playing");
 const playButton = document.querySelector("#main-play");
 const progress = document.querySelector("#player-progress");
@@ -105,22 +63,15 @@ lyricsDialog.addEventListener("click", (event) => {
 
 visibleTracks.forEach((item) => {
   const title = item.querySelector(".play-track").textContent.trim();
-  const resource = lyrics[title];
-  if (resource) {
-    const button = document.createElement("button");
-    button.className = "lyric-trigger";
-    button.type = "button";
-    button.textContent = "Tekst";
-    button.addEventListener("click", () => openLyrics(title, resource));
-    item.append(button);
-  }
-
-  const download = document.createElement("a");
-  download.className = "track-download";
-  download.href = item.dataset.path;
-  download.download = "";
-  download.setAttribute("aria-label", `Preuzmi pesmu: ${title}`);
-  item.append(download);
+  const link = item.querySelector(".lyric-trigger");
+  if (!link) return;
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    openLyrics(title, {
+      file: link.getAttribute("href"),
+      credit: lyricCredits[title],
+    });
+  });
 });
 
 function play(track) {
