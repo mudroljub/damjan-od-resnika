@@ -170,6 +170,27 @@ h1 {
   max-width: 500px;
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
+.hero-album-covers {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+.hero-album-covers a {
+  display: block;
+  width: clamp(7rem, 18vw, 16.25rem);
+  border: 1px solid rgba(236, 235, 231, 0.35);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.hero-album-covers img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-album-covers a:hover,
+.hero-album-covers a:focus-visible {
+  border-color: var(--gold);
+  transform: translateY(-0.2rem);
+}
 .hero-link {
   display: inline-flex;
   margin-top: 1.3rem;
