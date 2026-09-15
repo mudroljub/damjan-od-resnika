@@ -167,7 +167,7 @@ h1 {
   max-width: 780px;
 }
 .hero-copy {
-  max-width: 500px;
+  max-width: 600px;
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
 .hero-album-covers {
@@ -208,7 +208,7 @@ h1 {
   z-index: 4;
   bottom: 0;
   background: var(--gold);
-  color: var(--ink);
+  color: #050505;
   padding: 0.8rem clamp(1.25rem, 5vw, 5rem);
   display: grid;
   grid-template-columns: auto minmax(130px, 1fr) auto;
