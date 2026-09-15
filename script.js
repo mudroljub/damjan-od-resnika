@@ -82,13 +82,20 @@ function play(track) {
     progress.disabled = true;
   }
   audio.src = track.path;
-  audio.play();
   nowPlaying.textContent = `${track.title} — ${track.album}${track.year ? ` (${track.year})` : ""}`;
   document
     .querySelectorAll(".track")
     .forEach((item) =>
       item.classList.toggle("active", item.dataset.path === track.path),
     );
+  const playAttempt = audio.play();
+  if (playAttempt) {
+    playAttempt.catch(() => {
+      if (current?.path !== track.path) return;
+      updatePlaybackControls();
+      nowPlaying.textContent = `Reprodukcija nije mogla da se pokrene: ${track.title}`;
+    });
+  }
 }
 
 function updatePlaybackControls() {
@@ -134,8 +141,14 @@ if (audio) {
   );
   document.querySelector("#next").addEventListener("click", nextTrack);
   audio.addEventListener("ended", nextTrack);
-  audio.addEventListener("play", updatePlaybackControls);
+  audio.addEventListener("playing", updatePlaybackControls);
   audio.addEventListener("pause", updatePlaybackControls);
+  audio.addEventListener("error", () => {
+    updatePlaybackControls();
+    if (current) {
+      nowPlaying.textContent = `Pesma nije dostupna: ${current.title}`;
+    }
+  });
   audio.addEventListener("loadedmetadata", () => {
     if (!progress) return;
     progress.disabled = !Number.isFinite(audio.duration) || audio.duration <= 0;
