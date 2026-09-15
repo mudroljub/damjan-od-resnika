@@ -106,13 +106,21 @@ lyricsDialog.addEventListener("click", (event) => {
 visibleTracks.forEach((item) => {
   const title = item.querySelector(".play-track").textContent.trim();
   const resource = lyrics[title];
-  if (!resource) return;
-  const button = document.createElement("button");
-  button.className = "lyric-trigger";
-  button.type = "button";
-  button.textContent = "Tekst";
-  button.addEventListener("click", () => openLyrics(title, resource));
-  item.append(button);
+  if (resource) {
+    const button = document.createElement("button");
+    button.className = "lyric-trigger";
+    button.type = "button";
+    button.textContent = "Tekst";
+    button.addEventListener("click", () => openLyrics(title, resource));
+    item.append(button);
+  }
+
+  const download = document.createElement("a");
+  download.className = "track-download";
+  download.href = item.dataset.path;
+  download.download = "";
+  download.setAttribute("aria-label", `Preuzmi pesmu: ${title}`);
+  item.append(download);
 });
 
 function play(track) {
