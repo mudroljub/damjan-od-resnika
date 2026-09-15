@@ -25,9 +25,9 @@
   --color-canvas: #050505;
   --color-surface: #121212;
   --color-text: #ecebe7;
-  --color-accent: #bd93f9;
-  --color-interactive: #00cc00;
-  --color-danger: #e31b23;
+  --color-emphasis: #bd93f9;
+  --color-link: #00cc00;
+  --color-brand-mark: #e31b23;
   --color-text-muted: rgba(236, 235, 231, 0.72);
   --color-line: rgba(236, 235, 231, 0.19);
   --overlay-soft: rgba(5, 5, 5, 0.36);
@@ -71,17 +71,18 @@ h1, h2, h3 {
 
 /* Shared type, color, and spacing utilities. */
 .type-label, .catalog-heading, .album-year, .hero-kicker, .lyric-trigger, .lyrics-credit {
-  color: var(--color-interactive);
   font-size: 0.8rem;
   font-weight: 700;
   line-height: 1.4;
 }
-.type-meta, .text-muted, .album-status, .album-alias, .art-credit,
-.home-photo figcaption, .about-page-photo figcaption, .track-number {
+.type-label, .hero-kicker, .lyric-trigger, .lyrics-credit { color: var(--color-link); }
+.type-meta, .text-muted, .album-status,
+.album-alias, .art-credit, .home-photo figcaption, .about-page-photo figcaption, .track-number {
   color: var(--color-text-muted);
 }
-.text-accent { color: var(--color-accent); }
-.text-interactive { color: var(--color-interactive); }
+.catalog-heading, .album-year { color: var(--color-emphasis); }
+.text-emphasis { color: var(--color-emphasis); }
+.text-link { color: var(--color-link); }
 
 .type-body, .hero-copy, .contact-body, .about-page-content p {
   max-width: var(--text-width);
@@ -118,7 +119,7 @@ h1, h2, h3 {
   top: 1rem;
   left: 1rem;
   padding: 0.5rem 1rem;
-  background: var(--color-accent);
+  background: var(--color-emphasis);
   color: var(--color-surface);
 }
 
@@ -140,7 +141,7 @@ h1, h2, h3 {
   letter-spacing: -0.04em;
   text-decoration: none;
 }
-.brand-mark { color: var(--color-danger); }
+.brand-mark { color: var(--color-brand-mark); }
 .nav, .footer-links, .socials, .hero-album-covers, .album-meta {
   display: flex;
   flex-wrap: wrap;
@@ -148,7 +149,7 @@ h1, h2, h3 {
 }
 .nav { gap: clamp(0.7rem, 2vw, 2rem); }
 .nav a { font-size: 0.875rem; text-decoration: none; }
-.nav a:hover, .nav a.active, .footer-links a:hover { color: var(--color-accent); }
+.nav a:hover, .nav a.active, .footer-links a:hover { color: var(--color-emphasis); }
 .language {
   padding: 0.25rem 0.75rem;
   border: 1px solid var(--color-line);
@@ -203,14 +204,14 @@ h1 { margin-bottom: 1.5rem; }
   height: auto;
 }
 .hero-album-covers a:hover, .hero-album-covers a:focus-visible {
-  border-color: var(--color-accent);
+  border-color: var(--color-emphasis);
   transform: translateY(-0.2rem);
 }
 
 .hero-link, .gallery-link, .about-link {
   display: inline-block;
   padding-bottom: 0.25rem;
-  border-bottom: 2px solid var(--color-accent);
+  border-bottom: 2px solid var(--color-emphasis);
   color: var(--color-text);
   font-weight: 700;
   text-decoration: none;
@@ -218,7 +219,7 @@ h1 { margin-bottom: 1.5rem; }
 .hero-link { margin-top: 1.25rem; }
 .gallery-link { margin-top: 1.5rem; }
 .about-link { margin-top: 2rem; }
-.hero-link:hover, .gallery-link:hover, .about-link:hover, .download:hover { color: var(--color-accent); }
+.hero-link:hover, .gallery-link:hover, .about-link:hover, .download:hover { color: var(--color-emphasis); }
 
 .player {
   position: sticky;
@@ -229,7 +230,7 @@ h1 { margin-bottom: 1.5rem; }
   align-items: center;
   gap: 1rem;
   padding: 0.75rem var(--page-inline);
-  background: var(--color-accent);
+  background: var(--color-emphasis);
   color: var(--color-canvas);
 }
 .round-button {
@@ -238,7 +239,7 @@ h1 { margin-bottom: 1.5rem; }
   border: 0;
   border-radius: var(--radius-round);
   background: var(--color-canvas);
-  color: var(--color-accent);
+  color: var(--color-emphasis);
   font-weight: 700;
 }
 .round-button:hover { background: var(--color-surface); }
@@ -268,7 +269,7 @@ h1 { margin-bottom: 1.5rem; }
 .player-progress::-moz-range-thumb {
   width: 0.8rem;
   height: 0.8rem;
-  border: 2px solid var(--color-accent);
+  border: 2px solid var(--color-emphasis);
   border-radius: var(--radius-round);
   background: var(--color-canvas);
 }
@@ -369,7 +370,7 @@ h1 { margin-bottom: 1.5rem; }
   font-weight: 700;
 }
 .album-year { margin: 0 0 1.25rem; }
-.album-meta a { color: var(--color-interactive); text-underline-offset: 0.18em; }
+.album-meta a { color: var(--color-link); text-underline-offset: 0.18em; }
 .album-alias { margin: -0.125rem 0 0.5rem; font-size: 0.9rem; line-height: 1.35; }
 .download {
   display: inline-flex;
@@ -393,7 +394,7 @@ h1 { margin-bottom: 1.5rem; }
 }
 .download:hover, .download:focus-visible {
   text-decoration: underline;
-  text-decoration-color: var(--color-accent);
+  text-decoration-color: var(--color-emphasis);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25rem;
 }
@@ -425,18 +426,18 @@ h1 { margin-bottom: 1.5rem; }
   height: 1.7rem;
   place-items: center;
   padding-left: 0.08rem;
-  border: 1px solid var(--color-interactive);
+  border: 1px solid var(--color-link);
   border-radius: var(--radius-round);
-  color: var(--color-interactive);
+  color: var(--color-link);
   font-size: 0.6rem;
 }
-.play-track:hover, .play-track:focus-visible { color: var(--color-accent); text-decoration: none; }
+.play-track:hover, .play-track:focus-visible { color: var(--color-emphasis); text-decoration: none; }
 .play-track:hover::before, .play-track:focus-visible::before, .track.active .play-track::before {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  border-color: var(--color-emphasis);
+  color: var(--color-emphasis);
 }
-.track-mark { color: var(--color-interactive); opacity: 0; }
-.track.active .track-mark { color: var(--color-accent); opacity: 1; }
+.track-mark { color: var(--color-link); opacity: 0; }
+.track.active .track-mark { color: var(--color-emphasis); opacity: 1; }
 .track.playing .play-track::before { content: "❚❚"; padding-left: 0; font-size: 0.45rem; }
 
 .gallery { background: var(--color-canvas); }
@@ -477,7 +478,7 @@ h1 { margin-bottom: 1.5rem; }
   background: transparent;
   cursor: zoom-in;
 }
-.gallery-open:focus-visible { outline: 3px solid var(--color-accent); outline-offset: -3px; }
+.gallery-open:focus-visible { outline: 3px solid var(--color-emphasis); outline-offset: -3px; }
 .gallery-dialog {
   width: 100vw;
   max-width: none;
@@ -504,7 +505,7 @@ h1 { margin-bottom: 1.5rem; }
 }
 
 .contact h1 { max-width: 830px; }
-.contact a { color: inherit; text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; }
+.contact a { color: inherit; text-decoration-color: var(--color-emphasis); text-decoration-thickness: 2px; }
 .socials { gap: 0.5rem 1.25rem; margin-top: 2.5rem; }
 .socials a { padding-bottom: 0.25rem; border-bottom: 1px solid currentColor; font-weight: 700; text-decoration: none; }
 .site-footer {
@@ -512,7 +513,7 @@ h1 { margin-bottom: 1.5rem; }
   justify-content: space-between;
   padding: 1.25rem var(--page-inline);
   background: var(--color-canvas);
-  color: var(--color-interactive);
+  color: var(--color-link);
   font-size: 0.8rem;
 }
 .site-footer a { text-decoration: none; }
@@ -523,16 +524,16 @@ h1 { margin-bottom: 1.5rem; }
 
 .about-page-content h1 { max-width: 14ch; }
 .about-page-content p { margin-bottom: 1.5rem; }
-.about-page-content p:last-of-type { margin-top: 2.5rem; color: var(--color-accent); font-weight: 700; }
+.about-page-content p:last-of-type { margin-top: 2.5rem; color: var(--color-emphasis); font-weight: 700; }
 .about-page-photo { width: min(100%, 56rem); margin: clamp(3rem, 7vw, 5rem) 0 0; }
 
 .lyric-trigger,
 .track-download {
   padding: 0.25rem 0;
   border: 0;
-  border-bottom: 1px solid var(--color-interactive);
+  border-bottom: 1px solid var(--color-link);
   background: none;
-  color: var(--color-interactive);
+  color: var(--color-link);
   font-weight: 400;
   text-decoration: none;
 }
@@ -547,7 +548,7 @@ h1 { margin-bottom: 1.5rem; }
 }
 .lyric-trigger:hover,
 .track-download:hover,
-.track-download:focus-visible { border-color: var(--color-accent); color: var(--color-accent); }
+.track-download:focus-visible { border-color: var(--color-emphasis); color: var(--color-emphasis); }
 .lyrics-dialog {
   width: min(44rem, calc(100vw - 2rem));
   max-height: min(80vh, 50rem);
@@ -585,7 +586,7 @@ h1 { margin-bottom: 1.5rem; }
   .footer-links a
 ) {
   border-bottom: 0;
-  color: var(--color-interactive);
+  color: var(--color-link);
   font-weight: 400;
   text-decoration: none;
 }
@@ -612,14 +613,14 @@ h1 { margin-bottom: 1.5rem; }
   .socials a,
   .footer-links a
 ):focus-visible {
-  color: var(--color-accent);
+  color: var(--color-emphasis);
   text-decoration: underline;
   text-decoration-color: currentColor;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.25rem;
 }
 
-:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--color-emphasis); outline-offset: 3px; }
 
 @media (max-width: 700px) {
   .site-header { align-items: flex-start; flex-wrap: wrap; row-gap: 0.5rem; }
