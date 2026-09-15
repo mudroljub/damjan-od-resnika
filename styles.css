@@ -390,7 +390,7 @@ h1 { margin-bottom: 1.5rem; }
 .tracks { margin: 0; padding: 0; list-style: none; }
 .track {
   display: grid;
-  grid-template-columns: 2.3rem minmax(0, 1fr) auto auto auto;
+  grid-template-columns: 2.3rem minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 0;
@@ -423,8 +423,6 @@ h1 { margin-bottom: 1.5rem; }
   border-color: var(--color-emphasis);
   color: var(--color-emphasis);
 }
-.track-mark { color: var(--color-link); opacity: 0; }
-.track.active .track-mark { color: var(--color-emphasis); opacity: 1; }
 .track.playing .play-track::before { content: "❚❚"; padding-left: 0; font-size: 0.45rem; }
 
 .gallery { background: var(--color-canvas); }
@@ -625,7 +623,6 @@ h1 { margin-bottom: 1.5rem; }
   .gallery-item img, .gallery-item:nth-child(7n + 1) img, .gallery-item:nth-child(7n + 5) img { height: 190px; }
   .site-footer { flex-direction: column; gap: 1rem; }
   .track { grid-template-columns: 2.3rem minmax(0, 1fr) auto auto; }
-  .track-mark { display: none; }
   .lyrics-dialog { width: 100vw; max-width: none; height: 100svh; max-height: 100svh; border: 0; }
   .lyrics-header { padding: 1.25rem 1.25rem 0.75rem; }
   .lyrics-body { padding: 1.5rem 1.25rem 2rem; }
