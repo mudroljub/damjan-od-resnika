@@ -572,6 +572,53 @@ h1 { margin-bottom: 1.5rem; }
 .lyrics-content { max-width: var(--text-width); margin: 0; font: inherit; line-height: 1.78; white-space: pre-wrap; }
 .lyrics-credit { max-width: var(--text-width); margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--color-line); }
 
+/* One treatment for textual and action links. */
+.text-link,
+:is(
+  .hero-link,
+  .gallery-link,
+  .about-link,
+  .download,
+  .lyric-trigger,
+  .contact a,
+  .socials a,
+  .footer-links a
+) {
+  border-bottom: 0;
+  color: var(--color-interactive);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.text-link:hover,
+.text-link:focus-visible,
+:is(
+  .hero-link,
+  .gallery-link,
+  .about-link,
+  .download,
+  .lyric-trigger,
+  .contact a,
+  .socials a,
+  .footer-links a
+):hover,
+:is(
+  .hero-link,
+  .gallery-link,
+  .about-link,
+  .download,
+  .lyric-trigger,
+  .contact a,
+  .socials a,
+  .footer-links a
+):focus-visible {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25rem;
+}
+
 :focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
 
 @media (max-width: 700px) {
