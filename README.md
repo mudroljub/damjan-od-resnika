@@ -1,34 +1,28 @@
 # Damjan od Resnika
 
-Damjan od Resnika, muzički projekat za sviranje svojih pesama sa prijateljima.
-
 Damjan od Resnika, počeo kao kantautor, postao muzički projekat koji okuplja prijatelje iz kraja i šire.
 
-Napisati kratku istoriju projekta: pisanje pesama, Uživo iz svoje sobe, U potrazi za bendom, javne probe... pauza u radu zbog rada za život
+## O projektu
 
-Bivši, sadašnji i budući muzičari... crtač...
+Prijatelji znani i neznani, ljubitelji muzike, dobro došli! Moje ime je Damjan Pavlica, a ovo je moj muzički projekat Damjan od Resnika, nastao radi sviranja autorskih pesama sa prijateljima.
 
-Mnoge pesme su prvo nastale kao poezija. Mnoge melodije su prvo nastale na raznima kampovanjima i druženjima pored vatre. Većina pesama je nastala početkom 2000-ih.
+Damjan od Resnika je suštinski eksperimentalna muzika - pesme još uvek žive i razvijaju se i ni ja ne znam šta će od njih ispasti.
 
-Nakon toga sam godinama tražio s kim bih svirao i gde bih snimao te pesme. Na kraju sam napravio svoj studio.
+Većina ovih pesama nastala je početkom 2000-ih godina, dok sam studirao. Obično bi prvo nastali tekstovi, a posle akordi i melodije, na raznim druženjima, kampovanjima i slično. Kada se nakupilo pesama, tražio sam gde bih snimao te pesme, pa sam napravio studio i počeo izbacivati demo snimke. Tražio sam s kim bih svirao pa sam zvao prijatelje muzičare. Neki su dolazili za snimanje, neki za svirke, svako kako može.
 
-Kontakt: Svirke, možda sviramo ako se navežbamo i ako se sakupimo. Više volimo javne probe :)
+Pošto se ekipa često menjala i bilo je teško ustaliti se za svirke, pravili smo javne probe na kojima je publika mogla da nas čuje. Te javne probe smo svi obožavali jer smo mogli biti kreativni i isprobavati pred publikom bez opterećenja.
 
-Neki od prijatelja sa kojima sam veoma uživao da sviram sada žive u inostranstvu, neki se bave svojim projektima, ali nadam se da ću sa svakim svirati još mnogo puta.
+Mnogo muzičara i muzičarki je prošlo kroz ovaj projekat, a sa svakim od njih pesme su dobijale drugačiji fazon - neke povuku na rokanje, neke na ambijent, rege, world music... Tako ista pesma postaje uvek nova i drugačija. Neki donesu autorske pesme, pa projekat postaje bogatiji. Vremenom, neki od prijatelja muzičara su otišli preko, neki imaju svoje projekte, neki porodične obaveze, ali svako je nešto ostavio i nadam se da ćemo svirati opet. I sam sam dugo vremena bio u obavezama, odselio se, ostao bez studija, jurio razne poslove, zapostavio muziku. 
 
-Te pesme nisu nikom naročito bitne osim meni - one pamte čitav jedan izgubljeni svet..
+Sada se lagano vraćam pesmama, i nadam se da ćete mi svi u tome pomoći :)
 
-Sa raznim ljudima, pesme dobijaju drugačiji stil i život, menjaju se preko roka, metala, regea, ambijenta, gypsy panka... i tako ista pesma postaje uvek nova i drugačija.
+Cilj projekta Damjan od Resnika je da ove pesme žive, jer one pamte čitav jedan svet.
 
-Cilj projekta je da se pesme žive i da ekipa može da ih svira u bilo kojoj postavi, čak i bez njihovog tvorca.
-
-Eksperimentalna muzika, pesme koje još uvek žive i razvijaju se i ni ja ne znam šta će od njih ispasti.
-
-Ljubitelji muzike, prijatelji znani i neznani, dobro došli.
-
-U skladu sa životnom situacijom, jedno vreme sam se žanrovski okrenuo dečjim pesmama kako bih mogao u studio da snimam za svoju decu i zajedno sa svojom decom. U tom periodu objavio sam Dečji album, pod umetničkim imenom Doktor Mačak.
+Kao što Iron Maiden ima svog crtača koji daje vizualni identitet bendu, tako i mi imamo Uroša Pejčića koji crta ove crteže ;)
 
 ## TODO
 
 - napisati o projektu
 - srediti kontakt
+  Kontakt: Svirke, možda sviramo ako se navežbamo i ako se sakupimo. Više volimo javne probe :)
+- opis slika iz galerije ponoviti na naslovnoj
