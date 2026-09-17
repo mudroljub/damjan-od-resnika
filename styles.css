@@ -22,6 +22,11 @@
   --overlay: rgba(5, 5, 5, 0.8);
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: Fraunces, Georgia, serif;
+  --type-size-display: clamp(4rem, 11vw, 9.7rem);
+  --type-size-page: clamp(3rem, 6vw, 6rem);
+  --type-size-section: clamp(1.8rem, 3.2vw, 3rem);
+  --type-size-card: clamp(1.25rem, 2vw, 1.65rem);
+  --type-size-label: 0.8rem;
   --page-inline: clamp(1.25rem, 5vw, 5rem);
   --section-block: clamp(4.5rem, 9vw, 8rem);
   --content-width: 72rem;
@@ -58,8 +63,8 @@ h1, h2, h3 {
 }
 
 /* Shared type, color, and spacing utilities. */
-.type-label, .catalog-heading, .album-year, .hero-kicker, .lyric-trigger, .lyrics-credit {
-  font-size: 0.8rem;
+.type-label, .album-year, .hero-kicker, .lyric-trigger, .lyrics-credit {
+  font-size: var(--type-size-label);
   font-weight: 700;
   line-height: 1.4;
 }
@@ -68,7 +73,6 @@ h1, h2, h3 {
 .art-credit, .home-photo figcaption, .about-page-photo figcaption, .track-number, .album-year {
   color: var(--color-text-muted);
 }
-.catalog-heading { color: var(--color-emphasis); }
 .text-emphasis { color: var(--color-emphasis); }
 .text-link { color: var(--color-link); }
 
@@ -84,15 +88,27 @@ h1, h2, h3 {
   line-height: 1.2;
   letter-spacing: -0.035em;
 }
-.type-title, h2, .album-title, .lyrics-header h2 {
+.type-section-title, .type-title {
   font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4vw, 3.8rem);
+  font-size: var(--type-size-section);
   line-height: 0.98;
   letter-spacing: -0.05em;
 }
-.type-display, h1 {
+.type-card-title, .album-title, .lyrics-header h2 {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 11vw, 9.7rem);
+  font-size: var(--type-size-card);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+.type-display {
+  font-family: var(--font-display);
+  font-size: var(--type-size-display);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+.page-title {
+  font-family: var(--font-display);
+  font-size: var(--type-size-page);
   line-height: 0.98;
   letter-spacing: -0.05em;
 }
@@ -340,8 +356,6 @@ h1 { margin-bottom: 1.5rem; }
   margin: 0;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--color-line);
-  font-family: var(--font-sans);
-  letter-spacing: -0.02em;
 }
 .album, .singles-content {
   display: grid;
@@ -350,7 +364,7 @@ h1 { margin-bottom: 1.5rem; }
 }
 .album { padding: 2rem 0; border-top: 1px solid var(--color-line); }
 .album:first-of-type { border-top: 0; }
-.cover { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.cover { display: block; width: 100%; height: auto; }
 .album-title { margin: 0 0 0.5rem; }
 .album-meta {
   align-items: baseline;
@@ -472,9 +486,6 @@ h1 { margin-bottom: 1.5rem; }
   margin: 0 auto clamp(2rem, 4vw, 3.5rem);
   padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--color-line);
-  font-family: var(--font-sans);
-  font-size: clamp(1.25rem, 2vw, 1.65rem);
-  letter-spacing: -0.02em;
 }
 .art-stack {
   display: grid;
