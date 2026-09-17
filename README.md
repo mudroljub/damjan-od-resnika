@@ -3,5 +3,3 @@
 Damjan od Resnika, muzički projekat koji okuplja prijatelje iz kraja i šire.
 
 ## TODO
-
-- dodati negde žanrove?
