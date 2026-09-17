@@ -1,6 +1,6 @@
-const gallery = document.querySelector(".gallery-grid");
+const galleries = document.querySelectorAll(".gallery-grid, .art-stack");
 
-if (gallery) {
+if (galleries.length) {
   const dialog = document.createElement("dialog");
   dialog.className = "gallery-dialog";
   dialog.innerHTML =
@@ -9,20 +9,23 @@ if (gallery) {
 
   const dialogImage = dialog.querySelector(".gallery-dialog-image");
 
-  gallery.querySelectorAll(".gallery-item").forEach((item) => {
-    const image = item.querySelector("img");
-    const caption =
-      item.querySelector("figcaption")?.textContent.trim() || image.alt;
-    const open = document.createElement("button");
-    open.className = "gallery-open";
-    open.type = "button";
-    open.setAttribute("aria-label", `Otvori celu sliku: ${caption}`);
-    open.addEventListener("click", () => {
-      dialogImage.src = image.currentSrc || image.src;
-      dialogImage.alt = image.alt;
-      dialog.showModal();
+  galleries.forEach((gallery) => {
+    gallery.querySelectorAll(".gallery-item, .art-item").forEach((item) => {
+      const image = item.querySelector("img");
+      const caption =
+        item.querySelector("figcaption")?.textContent.trim() || image.alt;
+      const open = document.createElement("button");
+      open.className = "gallery-open";
+      open.type = "button";
+      open.setAttribute("aria-label", `Otvori celu sliku: ${caption}`);
+      open.addEventListener("click", () => {
+        dialogImage.src = image.currentSrc || image.src;
+        dialogImage.alt = image.alt;
+        dialog.setAttribute("aria-label", caption);
+        dialog.showModal();
+      });
+      item.append(open);
     });
-    item.append(open);
   });
 
   dialog.addEventListener("click", (event) => {

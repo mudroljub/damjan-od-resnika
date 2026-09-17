@@ -4,4 +4,4 @@ Damjan od Resnika, muzički projekat koji okuplja prijatelje iz kraja i šire.
 
 ## TODO
 
-- dodati art sekciju na sajt
+- dodati negde žanrove?

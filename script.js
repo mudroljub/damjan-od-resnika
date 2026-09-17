@@ -82,7 +82,7 @@ function play(track) {
     progress.disabled = true;
   }
   audio.src = track.path;
-  nowPlaying.textContent = `${track.title} — ${track.album}${track.year ? ` (${track.year})` : ""}`;
+  nowPlaying.textContent = `${track.title} - ${track.album}${track.year ? ` (${track.year})` : ""}`;
   document
     .querySelectorAll(".track")
     .forEach((item) =>

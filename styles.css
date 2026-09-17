@@ -295,6 +295,8 @@ h1 { margin-bottom: 1.5rem; }
 .about-art picture, .home-photo picture { display: block; }
 .about-image { background: var(--color-canvas); }
 .art-credit { margin: 1rem 0 0; font-size: 0.9rem; line-height: 1.5; text-align: center; }
+.art-credit > span { display: block; }
+.art-credit-link { display: inline-block; margin-top: 0.35rem; }
 
 .home-photos {
   padding-top: 0;
@@ -453,6 +455,62 @@ h1 { margin-bottom: 1.5rem; }
   color: var(--color-text);
   font-size: 0.8rem;
   line-height: 1.4;
+}
+.gallery-credit {
+  max-width: var(--text-width);
+  margin: clamp(3.5rem, 8vw, 6rem) 0 0;
+  color: var(--color-text-muted);
+}
+.art-page > .page-title,
+.art-page > .art-section {
+  width: min(100%, 1500px);
+  margin-inline: auto;
+}
+.art-section + .art-section { margin-top: clamp(4.5rem, 10vw, 8rem); }
+.art-section-title {
+  width: 100%;
+  margin: 0 auto clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-line);
+  font-family: var(--font-sans);
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  letter-spacing: -0.02em;
+}
+.art-stack {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+  width: 100%;
+  gap: clamp(1rem, 2vw, 2rem);
+  margin-inline: auto;
+}
+.art-item {
+  position: relative;
+  grid-column: span 6;
+  width: fit-content;
+  max-width: min(100%, 720px);
+  margin: 0 auto;
+}
+.art-item--portrait,
+.art-item--square { grid-column: span 4; }
+.art-item--portrait { max-width: min(100%, 360px); }
+.art-item--square { max-width: min(100%, 600px); }
+.art-item img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.art-item figcaption {
+  padding-top: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+.art-author {
+  width: min(100%, 1500px);
+  margin: clamp(3.5rem, 8vw, 6rem) auto 0;
+  color: var(--color-text-muted);
 }
 .gallery-open {
   position: absolute;
@@ -621,6 +679,7 @@ h1 { margin-bottom: 1.5rem; }
   .album, .singles-content { grid-template-columns: 100px 1fr; gap: 1.25rem; }
   .gallery-item, .gallery-item:nth-child(7n + 1), .gallery-item:nth-child(7n + 5) { grid-column: span 6; }
   .gallery-item img, .gallery-item:nth-child(7n + 1) img, .gallery-item:nth-child(7n + 5) img { height: 190px; }
+  .art-item, .art-item--portrait, .art-item--square { grid-column: span 12; }
   .site-footer { flex-direction: column; gap: 1rem; }
   .track { grid-template-columns: 2.3rem minmax(0, 1fr) auto auto; }
   .lyrics-dialog { width: 100vw; max-width: none; height: 100svh; max-height: 100svh; border: 0; }
