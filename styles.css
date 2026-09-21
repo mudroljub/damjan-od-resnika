@@ -30,6 +30,7 @@
   --page-inline: clamp(1.25rem, 5vw, 5rem);
   --section-block: clamp(4.5rem, 9vw, 8rem);
   --content-width: 72rem;
+  --art-cover-size: 22.5rem;
   --text-width: 72ch;
   --radius-round: 50%;
   --radius-pill: 999px;
@@ -143,7 +144,7 @@ h1, h2, h3 {
   width: auto;
   height: 48px;
   aspect-ratio: 808 / 268;
-  background: center / contain no-repeat url("images/logo.png");
+  background: center / contain no-repeat url("images/logo.webp");
   font-size: 0;
   text-decoration: none;
 }
@@ -513,20 +514,17 @@ h1 { margin-bottom: 1.5rem; }
 }
 .art-item {
   position: relative;
-  grid-column: span 6;
+  grid-column: span 4;
   width: fit-content;
-  max-width: min(100%, 720px);
+  max-width: min(100%, var(--art-cover-size));
   margin: 0 auto;
 }
-.art-item--portrait,
-.art-item--square { grid-column: span 4; }
-.art-item--portrait { max-width: min(100%, 360px); }
-.art-item--square { max-width: min(100%, 600px); }
 .art-item img {
   display: block;
   width: auto;
   max-width: 100%;
   height: auto;
+  max-height: var(--art-cover-size);
 }
 .art-item figcaption {
   padding-top: 0.5rem;
