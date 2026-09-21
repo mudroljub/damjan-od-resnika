@@ -304,8 +304,10 @@ h1 { margin-bottom: 1.5rem; }
 .about-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
+  width: min(100%, var(--content-width));
   align-items: center;
   gap: clamp(2rem, 8vw, 8rem);
+  margin-inline: auto;
 }
 .about-copy { margin: 2rem 0 0; }
 .about-note { max-width: var(--text-width); margin: 2rem 0 0; }
@@ -326,7 +328,11 @@ h1 { margin-bottom: 1.5rem; }
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
-.home-photos-grid { gap: clamp(0.6rem, 1.3vw, 1.2rem); }
+.home-photos-grid {
+  width: min(100%, var(--content-width));
+  gap: clamp(0.6rem, 1.3vw, 1.2rem);
+  margin-inline: auto;
+}
 .home-photo { grid-column: span 4; margin: 0; }
 .home-photo:nth-child(1) { grid-column: span 7; }
 .home-photo:nth-child(2) { grid-column: span 5; }
@@ -444,7 +450,11 @@ h1 { margin-bottom: 1.5rem; }
 .track.playing .play-track::before { content: "❚❚"; padding-left: 0; font-size: 0.45rem; }
 
 .gallery { background: var(--color-canvas); }
-.gallery-grid { gap: clamp(0.45rem, 1vw, 0.9rem); }
+.gallery-grid {
+  width: min(100%, var(--content-width));
+  gap: clamp(0.45rem, 1vw, 0.9rem);
+  margin-inline: auto;
+}
 .gallery-item {
   position: relative;
   grid-column: span 3;
@@ -473,14 +483,17 @@ h1 { margin-bottom: 1.5rem; }
   line-height: 1.4;
 }
 .gallery-credit {
-  width: 100%;
-  max-width: none;
-  margin: clamp(3.5rem, 8vw, 6rem) 0 0;
+  width: min(100%, var(--content-width));
+  margin: clamp(3.5rem, 8vw, 6rem) auto 0;
   color: var(--color-text-muted);
+}
+.gallery:not(.art-page) > .page-title {
+  width: min(100%, var(--content-width));
+  margin-inline: auto;
 }
 .art-page > .page-title,
 .art-page > .art-section {
-  width: min(100%, 1500px);
+  width: min(100%, var(--content-width));
   margin-inline: auto;
 }
 .art-section + .art-section { margin-top: clamp(4.5rem, 10vw, 8rem); }
@@ -522,7 +535,7 @@ h1 { margin-bottom: 1.5rem; }
   line-height: 1.4;
 }
 .art-author {
-  width: min(100%, 1500px);
+  width: min(100%, var(--content-width));
   margin: clamp(3.5rem, 8vw, 6rem) auto 0;
   color: var(--color-text-muted);
 }
@@ -580,12 +593,16 @@ h1 { margin-bottom: 1.5rem; }
 .social-icon svg { display: block; width: 100%; height: 100%; fill: currentColor; }
 
 .about-page-content h1 { max-width: 14ch; }
-.about-page-content p { margin-bottom: 1.5rem; }
+.about-page-content {
+  /* Keep this page on the site's shared content container. */
+  width: min(100%, var(--content-width));
+}
+.about-page-content p { max-width: none; margin-bottom: 1.5rem; }
 .about-page-content p:last-of-type { margin-top: 2.5rem; color: var(--color-emphasis); font-weight: 700; }
-.about-page-photo { width: min(100%, 56rem); margin: clamp(3rem, 7vw, 5rem) 0 0; }
+.about-page-photo { width: 100%; margin: clamp(3rem, 7vw, 5rem) 0 0; }
 .musicians-gallery { margin-top: clamp(3.5rem, 8vw, 6rem); }
 .musicians-gallery h2 { margin: 0 0 1rem; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; }
-.musicians-gallery > .musicians-gallery-intro { max-width: var(--text-width); margin: 0 0 2rem; color: var(--color-text); font-size: 1rem; font-weight: 400; line-height: 1.5; }
+.musicians-gallery > .musicians-gallery-intro { max-width: none; margin: 0 0 2rem; color: var(--color-text); font-size: 1rem; font-weight: 400; line-height: 1.5; }
 .musicians-gallery .art-stack { display: block; columns: 3 14rem; column-gap: clamp(0.75rem, 2vw, 1.5rem); }
 .musicians-gallery .art-item { display: inline-block; width: 100%; max-width: none; margin: 0 0 clamp(1.25rem, 2.5vw, 2rem); break-inside: avoid; }
 .musicians-gallery .art-item img { width: 100%; }
