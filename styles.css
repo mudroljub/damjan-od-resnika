@@ -139,13 +139,15 @@ h1, h2, h3 {
 }
 .site-header.page-header { position: relative; background: var(--color-canvas); }
 .brand {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.04em;
+  display: block;
+  width: auto;
+  height: 48px;
+  aspect-ratio: 808 / 268;
+  background: center / contain no-repeat url("images/logo.png");
+  font-size: 0;
   text-decoration: none;
 }
-.brand-mark { color: var(--color-brand-mark); }
+.brand img { display: block; width: 100%; height: auto; }
 .nav, .footer-links, .socials, .hero-album-covers, .album-meta {
   display: flex;
   flex-wrap: wrap;
