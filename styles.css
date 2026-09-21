@@ -580,6 +580,12 @@ h1 { margin-bottom: 1.5rem; }
 .about-page-content p { margin-bottom: 1.5rem; }
 .about-page-content p:last-of-type { margin-top: 2.5rem; color: var(--color-emphasis); font-weight: 700; }
 .about-page-photo { width: min(100%, 56rem); margin: clamp(3rem, 7vw, 5rem) 0 0; }
+.musicians-gallery { margin-top: clamp(3.5rem, 8vw, 6rem); }
+.musicians-gallery h2 { margin: 0 0 1rem; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; }
+.musicians-gallery > .musicians-gallery-intro { max-width: var(--text-width); margin: 0 0 2rem; color: var(--color-text); font-size: 1rem; font-weight: 400; line-height: 1.5; }
+.musicians-gallery .art-stack { display: block; columns: 3 14rem; column-gap: clamp(0.75rem, 2vw, 1.5rem); }
+.musicians-gallery .art-item { display: inline-block; width: 100%; max-width: none; margin: 0 0 clamp(1.25rem, 2.5vw, 2rem); break-inside: avoid; }
+.musicians-gallery .art-item img { width: 100%; }
 
 .lyric-trigger,
 .track-download {
@@ -691,6 +697,7 @@ h1 { margin-bottom: 1.5rem; }
   .gallery-item, .gallery-item:nth-child(7n + 1), .gallery-item:nth-child(7n + 5) { grid-column: span 6; }
   .gallery-item img, .gallery-item:nth-child(7n + 1) img, .gallery-item:nth-child(7n + 5) img { height: 190px; }
   .art-item, .art-item--portrait, .art-item--square { grid-column: span 12; }
+  .musicians-gallery .art-stack { columns: 2; }
   .site-footer { flex-direction: column; gap: 1rem; }
   .track { grid-template-columns: 2.3rem minmax(0, 1fr) auto auto; }
   .lyrics-dialog { width: 100vw; max-width: none; height: 100svh; max-height: 100svh; border: 0; }
