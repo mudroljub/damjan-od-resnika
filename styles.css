@@ -599,7 +599,7 @@ h1 { margin-bottom: 1.5rem; }
 }
 .about-page-content p { max-width: none; margin-bottom: 1.5rem; }
 .about-page-content p:last-of-type { margin-top: 2.5rem; color: var(--color-emphasis); font-weight: 700; }
-.about-page-photo { width: 100%; margin: clamp(3rem, 7vw, 5rem) 0 0; }
+.about-page-photo { width: 100%; margin: clamp(3rem, 7vw, 5rem) 0; }
 .musicians-gallery { margin-top: clamp(3.5rem, 8vw, 6rem); }
 .musicians-gallery h2 { margin: 0 0 1rem; font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; }
 .musicians-gallery > .musicians-gallery-intro { max-width: none; margin: 0 0 2rem; color: var(--color-text); font-size: 1rem; font-weight: 400; line-height: 1.5; }
