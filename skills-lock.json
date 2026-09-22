@@ -12,6 +12,12 @@
       "sourceType": "github",
       "skillPath": "skills/mix-engineer/SKILL.md",
       "computedHash": "07b3736408f3a7bb594c832a2d7489182e784fb319938f85c3450b6bd885f62d"
+    },
+    "still-image-retouching-finishing": {
+      "source": "calesthio/generative-media-skills",
+      "sourceType": "github",
+      "skillPath": "skills/production/post-production/still-image-retouching-finishing/SKILL.md",
+      "computedHash": "8b41df4182a905f998eee8677b5e9d2fa778a0bc552680369e0eed4de02d1160"
     }
   }
 }
