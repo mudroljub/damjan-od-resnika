@@ -4,4 +4,4 @@ Damjan od Resnika, muzički projekat koji okuplja prijatelje radi sviranja autor
 
 ## TODO
 
-- prepoznaj font sa nalepnica
+- pronaći art font za nalepnice
