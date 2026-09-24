@@ -28,7 +28,10 @@
   --page-inline: clamp(1.25rem, 5vw, 5rem);
   --section-block: clamp(4.5rem, 9vw, 8rem);
   --content-width: 72rem;
-  --art-cover-size: 22.5rem;
+  /* Art: landscape works use 360px; portrait and square works use 280px.
+     Classify source artwork by aspect ratio: > 1.1 landscape, < 0.9 portrait, otherwise square. */
+  --edition-art-size: min(17.5rem, calc(100vw - (var(--page-inline) * 2)));
+  --landscape-art-size: min(22.5rem, calc(100vw - (var(--page-inline) * 2)));
   --text-width: 72ch;
   --radius-round: 50%;
   --radius-pill: 999px;
@@ -205,7 +208,7 @@ h1 { margin-bottom: 1.5rem; }
 .hero-album-covers { gap: 0.75rem; margin-top: 1.5rem; }
 .hero-album-covers a {
   display: block;
-  width: clamp(7rem, 20vw, 18rem);
+  width: var(--edition-art-size);
   border: 1px solid rgba(236, 235, 231, 0.35);
   transition: border-color var(--duration-fast) ease, transform var(--duration-fast) ease;
 }
@@ -320,9 +323,12 @@ h1 { margin-bottom: 1.5rem; }
 }
 .about-copy { margin: 2rem 0 0; }
 .about-note { max-width: var(--text-width); margin: 2rem 0 0; }
-.about-art { width: min(100%, 380px, 49.5vw); justify-self: center; }
+.about-art { width: min(100%, var(--edition-art-size)); justify-self: center; }
 .about-art picture, .home-photo picture { display: block; }
-.about-image { background: var(--color-canvas); }
+.about-image {
+  width: 100%;
+  height: auto;
+}
 .art-credit { margin: 1rem 0 0; font-size: 0.9rem; line-height: 1.5; text-align: center; }
 .art-credit > span { display: block; }
 .art-credit-link { display: inline-block; margin-top: 0.35rem; }
@@ -374,12 +380,16 @@ h1 { margin-bottom: 1.5rem; }
 }
 .album, .singles-content {
   display: grid;
-  grid-template-columns: minmax(160px, 300px) 1fr;
+  grid-template-columns: var(--edition-art-size) 1fr;
   gap: clamp(1.5rem, 5vw, 5rem);
 }
 .album { padding: 2rem 0; border-top: 1px solid var(--color-line); }
 .album:first-of-type { border-top: 0; }
-.cover { display: block; width: 100%; height: auto; }
+.cover {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .album-title { margin: 0 0 0.5rem; }
 .album-meta {
   align-items: baseline;
@@ -510,16 +520,15 @@ h1 { margin-bottom: 1.5rem; }
 .art-item {
   position: relative;
   grid-column: span 4;
-  width: fit-content;
-  max-width: min(100%, var(--art-cover-size));
+  width: var(--landscape-art-size);
+  max-width: 100%;
   margin: 0 auto;
 }
+.art-item--portrait, .art-item--square { width: var(--edition-art-size); }
 .art-item img {
   display: block;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  max-height: var(--art-cover-size);
 }
 .gallery-open {
   position: absolute;
@@ -699,7 +708,8 @@ h1 { margin-bottom: 1.5rem; }
   .about-grid { grid-template-columns: 1fr; }
   .home-photo, .home-photo:nth-child(1), .home-photo:nth-child(2) { grid-column: span 12; }
   .home-photo img, .home-photo:nth-child(1) img, .home-photo:nth-child(2) img { height: clamp(220px, 62vw, 420px); }
-  .album, .singles-content { grid-template-columns: 100px 1fr; gap: 1.25rem; }
+  .album, .singles-content { grid-template-columns: 1fr; gap: 1.25rem; }
+  .album > picture, .album > .cover, .singles-content > .cover { width: var(--edition-art-size); }
   .gallery-item, .gallery-item:nth-child(7n + 1), .gallery-item:nth-child(7n + 5) { grid-column: span 6; }
   .gallery-item img, .gallery-item:nth-child(7n + 1) img, .gallery-item:nth-child(7n + 5) img { height: 190px; }
   .art-item, .art-item--portrait, .art-item--square { grid-column: span 12; }
