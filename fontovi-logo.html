@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="sr-Latn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#17120f" />
+    <title>Fontovi za logo — Damjan od Resnika</title>
+    <style>
+      @font-face { font-family: "Tabole"; src: url("fonts/Tabole-YqBB8.otf") format("opentype"); }
+      @font-face { font-family: "Mystery Quest"; src: url("fonts/MysteryQuest-Regular.ttf") format("truetype"); }
+      @font-face { font-family: "Gismonda"; src: url("fonts/GISMONDA.TTF") format("truetype"); }
+      @font-face { font-family: "Cyrillic Old Face"; src: url("fonts/cyrillicoldface.ttf") format("truetype"); }
+      @font-face { font-family: "Chiller"; src: url("fonts/chiller.ttf") format("truetype"); }
+
+      :root { color-scheme: dark; font-family: Arial, sans-serif; background: #17120f; color: #f5eee3; }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      main { width: min(100% - 2rem, 1100px); margin: 0 auto; padding: clamp(2rem, 6vw, 5rem) 0; }
+      header { display: flex; align-items: end; justify-content: space-between; gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid #66574d; }
+      h1 { margin: 0; font-size: clamp(2rem, 6vw, 4.5rem); line-height: .9; font-weight: 400; }
+      header p { max-width: 28rem; margin: 0; color: #c9b8a8; line-height: 1.5; }
+      .font-list { display: grid; margin-top: 1.5rem; border-top: 1px solid #66574d; }
+      .font-sample { display: grid; grid-template-columns: minmax(9rem, 15rem) 1fr; align-items: center; gap: 1.5rem; min-height: 10rem; padding: 1.5rem 0; border-bottom: 1px solid #66574d; }
+      .font-name { color: #c9b8a8; font-size: .82rem; line-height: 1.35; }
+      .font-name code { display: block; margin-top: .3rem; color: #8b796b; font-family: inherit; font-size: .75rem; }
+      .logo-text { margin: 0; font-family: var(--font); font-size: clamp(2.7rem, 7vw, 6.4rem); line-height: .92; overflow-wrap: anywhere; }
+      @media (max-width: 600px) { header, .font-sample { display: block; } header p { margin-top: 1rem; } .font-sample { min-height: 0; } .logo-text { margin-top: .8rem; } }
+      @media (prefers-reduced-motion: no-preference) { .font-sample { transition: background-color .15s ease; } .font-sample:hover { background: #251c17; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Probni fontovi<br />za logo</h1>
+        <p>Svi fontovi iz foldera <code>fonts</code>, prikazani na nazivu benda.</p>
+      </header>
+      <section class="font-list" aria-label="Poređenje fontova za logo">
+        <article class="font-sample" style="--font: 'Tabole'"><div class="font-name">Tabole<code>Tabole-YqBB8.otf</code></div><p class="logo-text">Damjan od Resnika</p></article>
+        <article class="font-sample" style="--font: 'Mystery Quest'"><div class="font-name">Mystery Quest<code>MysteryQuest-Regular.ttf</code></div><p class="logo-text">Damjan od Resnika</p></article>
+        <article class="font-sample" style="--font: 'Gismonda'"><div class="font-name">Gismonda<code>GISMONDA.TTF</code></div><p class="logo-text">Damjan od Resnika</p></article>
+        <article class="font-sample" style="--font: 'Cyrillic Old Face'"><div class="font-name">Cyrillic Old Face<code>cyrillicoldface.ttf</code></div><p class="logo-text">Damjan od Resnika</p></article>
+        <article class="font-sample" style="--font: 'Chiller'"><div class="font-name">Chiller<code>chiller.ttf</code></div><p class="logo-text">Damjan od Resnika</p></article>
+      </section>
+    </main>
+  </body>
+</html>
