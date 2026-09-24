@@ -4,8 +4,6 @@ Damjan od Resnika, muzički projekat koji okuplja prijatelje radi sviranja autor
 
 ## TODO
 
-- napravi mi test stranicu da isprobam sve fontove za logo benda Damjan od Resnika. učitaj ih sve na tu stranicu i ispiši naziv benda svakim od njih.
-- napraviti nove nalepnice
-  - pronaći art font za nalepnice (chiller)
-  - pripremiti za štampu
+- birati fontove fontovi-logo.html
+- napraviti nove nalepnice i pripremiti za štampu
 - plejer malo smeta na sajtu, pronađi alternative (vidi ostale radije)
