@@ -4,7 +4,9 @@ Damjan od Resnika, muzički projekat koji okuplja prijatelje radi sviranja autor
 
 ## TODO
 
-- birati fontove fontovi-logo.html
 - napraviti nove nalepnice i pripremiti za štampu
-- plejer malo smeta na sajtu, pronađi alternative (vidi ostale radije)
-- da mali header logo bude cyrillicoldface
+  - obnova i izgradnja ima drugačije dimenzije
+- probati mali header logo cyrillicoldface
+- daman-kosa.jpg probati u galeriju
+- nestale ikonice linkova iz footera na nekim stranicama
+- prepoznati font obnova i izgradnja
